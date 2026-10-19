@@ -1,0 +1,6 @@
+{
+  "name": "ระบบบริหารการยืมวัสดุ ครุภัณฑ์ และทรัพย์สิน อบต.ฝางคำ",
+  "description": "ระบบบริหารจัดการคำขอยืม คลังพัสดุครุภัณฑ์ อนุมัติ ส่งมอบ ตรวจสภาพ แจ้งเตือน คืนของ จัดการคิว และพิมพ์เอกสารราชการพร้อมใบส่วนท้ายฉีกได้ (Tear-off Slip) สำหรับ อบต.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

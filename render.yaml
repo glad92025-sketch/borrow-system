@@ -1,0 +1,26 @@
+# Render Blueprint Configuration
+# Deploy at https://render.com
+services:
+  # 1. Web Service (Node.js + Express with health check)
+  - type: web
+    name: borrow-system-fangkham
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  # 2. Static Site (Free Static Hosting)
+  - type: static
+    name: borrow-system-web
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
