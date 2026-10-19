@@ -33,6 +33,58 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Endpoint to sync or fetch the latest MySQL borrow_db records
+app.get('/api/mysql/sync', async (req, res) => {
+  try {
+    const mysql = await import('mysql2/promise');
+    const conn = await mysql.createConnection({
+      host: 'localhost',
+      port: 3306,
+      user: 'root',
+      password: '',
+      database: 'borrow_db',
+      charset: 'utf8mb4'
+    });
+
+    const [items]: any = await conn.query('SELECT * FROM items ORDER BY id ASC');
+    const [borrow]: any = await conn.query('SELECT * FROM borrow ORDER BY id ASC');
+    const [borrowItems]: any = await conn.query('SELECT * FROM borrow_items ORDER BY id ASC');
+    await conn.end();
+
+    res.json({
+      success: true,
+      source: 'MySQL localhost:3306/borrow_db',
+      timestamp: new Date().toISOString(),
+      counts: {
+        items: items.length,
+        borrow: borrow.length,
+        borrowItems: borrowItems.length,
+      },
+      items,
+      borrow,
+      borrowItems
+    });
+  } catch (err: any) {
+    // Fallback if MySQL is offline or running on cloud (Render)
+    const jsonPath = path.join(__dirname, 'src', 'data', 'realDbData.json');
+    if (fs.existsSync(jsonPath)) {
+      const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+      res.json({
+        success: true,
+        source: 'realDbData.json (snapshot fallback)',
+        timestamp: new Date().toISOString(),
+        counts: {
+          assets: data.assets?.length || 0,
+          borrowRequests: data.borrowRequests?.length || 0,
+        },
+        data
+      });
+    } else {
+      res.status(500).json({ success: false, message: err.message });
+    }
+  }
+});
+
 // Serve static assets from 'dist' directory
 const distDir = path.join(__dirname, 'dist');
 if (fs.existsSync(distDir)) {

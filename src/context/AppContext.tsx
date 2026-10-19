@@ -120,19 +120,24 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
+// Clear legacy v2 mock data cache if present
+try {
+  ['fangkam_assets_v2', 'fangkam_requests_v2', 'fangkam_citizens_v2', 'fangkam_employees_v2', 'fangkam_queues_v2', 'fangkam_damages_v2', 'fangkam_lost_v2'].forEach(k => localStorage.removeItem(k));
+} catch (e) {}
+
 const STORAGE_KEYS = {
-  AUTH: 'fangkam_auth_v2',
-  ASSETS: 'fangkam_assets_v2',
-  CITIZENS: 'fangkam_citizens_v2',
-  EMPLOYEES: 'fangkam_employees_v2',
-  REQUESTS: 'fangkam_requests_v2',
-  QUEUES: 'fangkam_queues_v2',
-  DAMAGES: 'fangkam_damages_v2',
-  LOST: 'fangkam_lost_v2',
-  AUDIT: 'fangkam_audit_v2',
-  RULES: 'fangkam_rules_v2',
-  SETTINGS: 'fangkam_settings_v2',
-  ROLE: 'fangkam_role_v2',
+  AUTH: 'fangkam_auth_v3',
+  ASSETS: 'fangkam_assets_v3',
+  CITIZENS: 'fangkam_citizens_v3',
+  EMPLOYEES: 'fangkam_employees_v3',
+  REQUESTS: 'fangkam_requests_v3',
+  QUEUES: 'fangkam_queues_v3',
+  DAMAGES: 'fangkam_damages_v3',
+  LOST: 'fangkam_lost_v3',
+  AUDIT: 'fangkam_audit_v3',
+  RULES: 'fangkam_rules_v3',
+  SETTINGS: 'fangkam_settings_v3',
+  ROLE: 'fangkam_role_v3',
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
