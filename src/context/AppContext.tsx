@@ -368,17 +368,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       case 'super_admin':
         return 'ผู้ดูแลระบบสูงสุด (Super Admin)';
       case 'admin':
-        return 'นายแอดมิน นครพัสดุ (Admin)';
+        return 'ผู้ดูแลระบบ (Admin)';
       case 'supply_officer':
-        return orgSettings.supplyOfficerName;
+        return orgSettings.supplyOfficerName || 'จ.ส.อ. เกียรติพล หาทรัพย์ (เจ้าหน้าที่พัสดุ)';
       case 'inspector':
-        return 'นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)';
+        return 'จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)';
       case 'executive':
-        return orgSettings.mayorName;
+        return orgSettings.mayorName || 'นายจำรูญ พิทักษ์ (นายก อบต.)';
       case 'employee':
-        return 'นางสาวกนกวรรณ รักษาสัตย์ (พนักงาน อบต.)';
+        return 'เจ้าหน้าที่ อบต.ฝางคำ';
       case 'citizen':
-        return 'นายทองดี ศรีบุญเรือง (ประชาชน)';
+        return 'ประชาชน (ผู้ขอยืม)';
       default:
         return 'ผู้ใช้งานระบบ';
     }

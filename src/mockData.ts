@@ -20,25 +20,25 @@ export const INITIAL_ORG_SETTINGS: OrgSettings = {
   "amphoe": "อำเภอสิรินธร",
   "province": "จังหวัดอุบลราชธานี",
   "postalCode": "34350",
-  "phone": "045-899123, 081-9988776",
-  "email": "fangkam2021@gmail.com",
-  "returnTimeLimit": "16:30 น.",
-  "returnLocationDefault": "อาคารงานพัสดุและคลังกลาง อบต.ฝางคำ",
+  "phone": "045-252586",
+  "email": "info@fangkham.go.th",
+  "returnTimeLimit": "เวลาราชการ",
+  "returnLocationDefault": "องค์การบริหารส่วนตำบลฝางคำ",
   "mayorName": "นายจำรูญ พิทักษ์",
   "mayorPosition": "นายกองค์การบริหารส่วนตำบลฝางคำ",
-  "paladName": "นางสาวจริยา วงศ์สว่าง",
+  "paladName": "นายชาญชัย อักโข",
   "paladPosition": "ปลัดองค์การบริหารส่วนตำบลฝางคำ",
-  "headOfSupplyName": "นายประสิทธิ์ มั่นคง",
-  "headOfSupplyPosition": "หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ",
-  "supplyOfficerName": "นายสุรชัย ธรรมดา",
-  "supplyOfficerPosition": "เจ้าหน้าที่พัสดุชำนาญงาน"
+  "headOfSupplyName": "นางวาสนา สินทรัพย์",
+  "headOfSupplyPosition": "ผู้อำนวยการกองคลัง",
+  "supplyOfficerName": "จ.ส.อ.เกียรติพล หาทรัพย์",
+  "supplyOfficerPosition": "เจ้าพนักงานธุรการชำนาญงาน"
 };
 
 export const INITIAL_RULES_CONFIG: SystemRuleConfig = {
-  version: '2569.1',
-  updatedAt: '2026-08-01 09:00',
-  updatedBy: 'นางสาวจริยา วงศ์สว่าง (ปลัด อบต.)',
-  effectiveDate: '1 สิงหาคม 2569',
+  version: 'ระเบียบ อบต.ฝางคำ',
+  updatedAt: '2026-04-17 09:00',
+  updatedBy: 'องค์การบริหารส่วนตำบลฝางคำ',
+  effectiveDate: 'ระเบียบการยืม-คืนพัสดุ',
   rules: [
     {
       id: 1,
@@ -67,7 +67,7 @@ export const INITIAL_RULES_CONFIG: SystemRuleConfig = {
     {
       id: 5,
       title: 'ต้องคืนตามกำหนดเวลาที่ระบุในใบยืม',
-      description: 'ต้องนำสิ่งของมาคืนภายในวันที่กำหนด และไม่เกินเวลา 16:30 น. ของวันทำการ หากติดขัดต้องแจ้งล่วงหน้า 24 ชม.',
+      description: 'ต้องนำสิ่งของมาคืนภายในวันที่กำหนด ภายในวันและเวลาราชการของ อบต.ฝางคำ',
       isRequired: true,
     },
     {
@@ -641,14 +641,14 @@ export const INITIAL_EMPLOYEES: EmployeeBorrower[] = [
   {
     "id": "emp-001",
     "employeeCode": "EMP-FK-001",
-    "prefix": "นาย",
-    "firstName": "สุรชัย",
-    "lastName": "ธรรมดา",
-    "position": "เจ้าหน้าที่พัสดุชำนาญงาน",
-    "department": "กองคลัง / งานพัสดุ",
-    "phone": "081-998-8776",
+    "prefix": "จ.ส.อ.",
+    "firstName": "เกียรติพล",
+    "lastName": "หาทรัพย์",
+    "position": "เจ้าพนักงานธุรการชำนาญงาน",
+    "department": "สำนักปลัด / งานพัสดุ",
+    "phone": "064-352-2769",
     "employeeType": "ข้าราชการ",
-    "supervisorName": "นายประสิทธิ์ มั่นคง",
+    "supervisorName": "นายชาญชัย อักโข",
     "status": "active",
     "totalBorrowsCount": 0,
     "overdueCount": 0
@@ -656,14 +656,14 @@ export const INITIAL_EMPLOYEES: EmployeeBorrower[] = [
   {
     "id": "emp-002",
     "employeeCode": "EMP-FK-002",
-    "prefix": "นางสาว",
-    "firstName": "กนกวรรณ",
-    "lastName": "รักษาสัตย์",
-    "position": "นักวิชาการสาธารณสุขปฏิบัติการ",
-    "department": "กองสาธารณสุขและสิ่งแวดล้อม",
-    "phone": "087-998-7766",
-    "employeeType": "พนักงานเทศบาล/อบต.",
-    "supervisorName": "นางสาวจริยา วงศ์สว่าง",
+    "prefix": "นาย",
+    "firstName": "ชาญชัย",
+    "lastName": "อักโข",
+    "position": "ปลัดองค์การบริหารส่วนตำบลฝางคำ",
+    "department": "สำนักปลัด",
+    "phone": "087-456-7858",
+    "employeeType": "ข้าราชการ",
+    "supervisorName": "นายจำรูญ พิทักษ์",
     "status": "active",
     "totalBorrowsCount": 0,
     "overdueCount": 0
@@ -671,14 +671,29 @@ export const INITIAL_EMPLOYEES: EmployeeBorrower[] = [
   {
     "id": "emp-003",
     "employeeCode": "EMP-FK-003",
-    "prefix": "นาย",
-    "firstName": "ประสิทธิ์",
-    "lastName": "มั่นคง",
-    "position": "หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ",
-    "department": "สำนักปลัด",
-    "phone": "089-445-5667",
+    "prefix": "นาง",
+    "firstName": "วาสนา",
+    "lastName": "สินทรัพย์",
+    "position": "ผู้อำนวยการกองคลัง",
+    "department": "กองคลัง",
+    "phone": "061-923-6333",
     "employeeType": "ข้าราชการ",
-    "supervisorName": "นางสาวจริยา วงศ์สว่าง",
+    "supervisorName": "นายชาญชัย อักโข",
+    "status": "active",
+    "totalBorrowsCount": 0,
+    "overdueCount": 0
+  },
+  {
+    "id": "emp-004",
+    "employeeCode": "EMP-FK-004",
+    "prefix": "จ่าเอก",
+    "firstName": "เกียรติศักดิ์",
+    "lastName": "เพ็ญเนตร",
+    "position": "เจ้าพนักงานพัสดุ",
+    "department": "กองคลัง",
+    "phone": "045-252586",
+    "employeeType": "ข้าราชการ",
+    "supervisorName": "นางวาสนา สินทรัพย์",
     "status": "active",
     "totalBorrowsCount": 0,
     "overdueCount": 0
@@ -757,7 +772,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-04-16 09:00",
     "history": [
       {
@@ -773,7 +788,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-11-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-04-16 10:00",
         "statusTo": "approved"
@@ -782,7 +797,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-11-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-04-16 11:00",
         "statusTo": "issued"
@@ -791,15 +806,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-11-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-04-18 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-04-16 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-04-18 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -846,7 +861,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-05-28 09:00",
     "history": [
       {
@@ -862,7 +877,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-12-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-05-28 10:00",
         "statusTo": "approved"
@@ -871,7 +886,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-12-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-05-28 11:00",
         "statusTo": "issued"
@@ -880,15 +895,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-12-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-05-31 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-05-28 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-05-31 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -963,7 +978,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-03 09:00",
     "history": [
       {
@@ -979,7 +994,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-13-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-03 10:00",
         "statusTo": "approved"
@@ -988,7 +1003,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-13-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-03 11:00",
         "statusTo": "issued"
@@ -997,15 +1012,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-13-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-07 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-03 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-07 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1080,7 +1095,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-08 09:00",
     "history": [
       {
@@ -1096,7 +1111,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-14-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-08 10:00",
         "statusTo": "approved"
@@ -1105,7 +1120,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-14-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-08 11:00",
         "statusTo": "issued"
@@ -1114,15 +1129,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-14-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-10 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-08 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-10 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1197,7 +1212,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-04 09:00",
     "history": [
       {
@@ -1213,7 +1228,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-15-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-04 10:00",
         "statusTo": "approved"
@@ -1222,7 +1237,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-15-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-04 11:00",
         "statusTo": "issued"
@@ -1231,15 +1246,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-15-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-11 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-04 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-11 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1300,7 +1315,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-14 09:00",
     "history": [
       {
@@ -1316,7 +1331,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-16-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-14 10:00",
         "statusTo": "approved"
@@ -1325,7 +1340,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-16-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-14 11:00",
         "statusTo": "issued"
@@ -1334,15 +1349,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-16-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-19 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-14 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-19 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1403,7 +1418,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-15 09:00",
     "history": [
       {
@@ -1419,7 +1434,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-17-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-15 10:00",
         "statusTo": "approved"
@@ -1428,7 +1443,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-17-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-15 11:00",
         "statusTo": "issued"
@@ -1437,15 +1452,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-17-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-21 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-15 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-21 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1506,7 +1521,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-16 09:00",
     "history": [
       {
@@ -1522,7 +1537,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-18-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-16 10:00",
         "statusTo": "approved"
@@ -1531,7 +1546,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-18-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-16 11:00",
         "statusTo": "issued"
@@ -1540,15 +1555,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-18-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-19 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-16 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-19 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1623,7 +1638,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-06-25 09:00",
     "history": [
       {
@@ -1639,7 +1654,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-19-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-25 10:00",
         "statusTo": "approved"
@@ -1648,7 +1663,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-19-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-06-25 11:00",
         "statusTo": "issued"
@@ -1657,15 +1672,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-19-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-06-29 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-06-25 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-06-29 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1712,7 +1727,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-07-23 09:00",
     "history": [
       {
@@ -1728,7 +1743,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-20-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-23 10:00",
         "statusTo": "approved"
@@ -1737,7 +1752,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-20-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-23 11:00",
         "statusTo": "issued"
@@ -1746,15 +1761,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-20-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-07-26 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-07-23 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-07-26 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1801,7 +1816,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-07-22 09:00",
     "history": [
       {
@@ -1817,7 +1832,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-21-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-22 10:00",
         "statusTo": "approved"
@@ -1826,7 +1841,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-21-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-22 11:00",
         "statusTo": "issued"
@@ -1835,15 +1850,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-21-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-07-26 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-07-22 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-07-26 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1904,7 +1919,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-07-22 09:00",
     "history": [
       {
@@ -1920,7 +1935,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-22-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-22 10:00",
         "statusTo": "approved"
@@ -1929,7 +1944,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-22-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-22 11:00",
         "statusTo": "issued"
@@ -1938,15 +1953,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-22-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-07-27 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-07-22 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-07-27 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -1993,7 +2008,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-07-30 09:00",
     "history": [
       {
@@ -2009,7 +2024,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-23-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-30 10:00",
         "statusTo": "approved"
@@ -2018,7 +2033,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-23-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-07-30 11:00",
         "statusTo": "issued"
@@ -2027,15 +2042,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-23-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-08-03 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-07-30 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-08-03 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -2082,7 +2097,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-08-02 09:00",
     "history": [
       {
@@ -2098,7 +2113,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-24-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-02 10:00",
         "statusTo": "approved"
@@ -2107,7 +2122,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-24-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-02 11:00",
         "statusTo": "issued"
@@ -2116,15 +2131,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-24-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-08-09 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-08-02 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-08-09 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -2199,7 +2214,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-08-12 09:00",
     "history": [
       {
@@ -2215,7 +2230,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-25-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-12 10:00",
         "statusTo": "approved"
@@ -2224,7 +2239,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-25-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-12 11:00",
         "statusTo": "issued"
@@ -2233,15 +2248,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-25-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-08-16 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-08-12 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-08-16 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -2316,7 +2331,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
     "depositAmount": 0,
     "depositStatus": "none",
     "attachments": [],
-    "agreedTermsVersion": "2569.1",
+    "agreedTermsVersion": "ระเบียบ อบต.ฝางคำ",
     "agreedAt": "2026-08-12 09:00",
     "history": [
       {
@@ -2332,7 +2347,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-26-2",
         "stepName": "อนุมัติคำขอยืม",
         "action": "ตรวจสอบพัสดุและอนุมัติให้ยืม",
-        "actorName": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-12 10:00",
         "statusTo": "approved"
@@ -2341,7 +2356,7 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-26-3",
         "stepName": "ส่งมอบพัสดุ",
         "action": "ส่งมอบพัสดุเรียบร้อย",
-        "actorName": "นายสุรชัย ธรรมดา",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์",
         "actorRole": "supply_officer",
         "timestamp": "2026-08-12 11:00",
         "statusTo": "issued"
@@ -2350,15 +2365,15 @@ export const INITIAL_BORROW_REQUESTS: BorrowRequest[] = [
         "id": "w-26-4",
         "stepName": "ตรวจรับคืนพัสดุ",
         "action": "ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย",
-        "actorName": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)",
+        "actorName": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
         "actorRole": "inspector",
         "timestamp": "2026-08-16 15:30",
         "statusTo": "returned"
       }
     ],
-    "deliveredBy": "นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)",
+    "deliveredBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)",
     "deliveredAt": "2026-08-12 11:00",
-    "receivedBy": "นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)",
+    "receivedBy": "จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)",
     "receivedAt": "2026-08-16 15:30",
     "returnInspectionResult": "perfect",
     "returnNotes": "ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ"
@@ -2370,15 +2385,15 @@ export const INITIAL_QUEUES: QueueItem[] = [
     "id": "q-001",
     "queueNumber": "B-0027",
     "type": "borrow",
-    "borrowerName": "นายสมพร จันทร์ทอง",
-    "phone": "081-998-1122",
-    "itemsSummary": "เก้าอี้ 50 ตัว, โต๊ะ 5 ตัว",
+    "borrowerName": "นางรัชนี สร้อยคำ",
+    "phone": "062-261-4951",
+    "itemsSummary": "เก้าอี้ 30 ตัว, เต้นท์ 2 หลัง",
     "departmentOrMoo": "หมู่ที่ 2 บ้านฝางเทิง",
     "createdAt": "2026-10-19 09:00",
     "status": "waiting",
     "calledAt": null,
     "counterNumber": null,
-    "notes": "ยืมจัดงานบุญกฐิน"
+    "notes": "ยืมจัดงานบุญ"
   }
 ];
 

@@ -90,8 +90,8 @@ export const OfficialBorrowDocument: React.FC<OfficialBorrowDocumentProps> = ({
     return name.replace(/\s*\([^)]*\)/g, '').trim();
   };
 
-  const supplyOfficerDisplayName = cleanName(orgSettings.supplyOfficerName) || 'นายสุรชัย ธรรมดา';
-  const mayorDisplayName = cleanName(orgSettings.mayorName) || 'นายสมศักดิ์ สุวรรณโชติ';
+  const supplyOfficerDisplayName = cleanName(orgSettings.supplyOfficerName) || 'จ.ส.อ. เกียรติพล หาทรัพย์';
+  const mayorDisplayName = cleanName(orgSettings.mayorName) || 'นายจำรูญ พิทักษ์';
 
   // QR code payload for citizen status verification
   const qrVerificationData = JSON.stringify({

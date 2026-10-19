@@ -205,7 +205,7 @@ async function exportFromMySQL() {
       depositAmount: 0,
       depositStatus: 'none',
       attachments: [],
-      agreedTermsVersion: '2569.1',
+      agreedTermsVersion: 'ระเบียบ อบต.ฝางคำ',
       agreedAt: `${bDate} 09:00`,
       history: [
         {
@@ -221,7 +221,7 @@ async function exportFromMySQL() {
           id: `w-${b.id}-2`,
           stepName: 'อนุมัติคำขอยืม',
           action: 'ตรวจสอบพัสดุและอนุมัติให้ยืม',
-          actorName: 'นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)',
+          actorName: 'จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)',
           actorRole: 'supply_officer',
           timestamp: `${bDate} 10:00`,
           statusTo: 'approved'
@@ -230,7 +230,7 @@ async function exportFromMySQL() {
           id: `w-${b.id}-3`,
           stepName: 'ส่งมอบพัสดุ',
           action: 'ส่งมอบพัสดุเรียบร้อย',
-          actorName: 'นายสุรชัย ธรรมดา',
+          actorName: 'จ.ส.อ. เกียรติพล หาทรัพย์',
           actorRole: 'supply_officer',
           timestamp: `${bDate} 11:00`,
           statusTo: 'issued'
@@ -239,15 +239,15 @@ async function exportFromMySQL() {
           id: `w-${b.id}-4`,
           stepName: 'ตรวจรับคืนพัสดุ',
           action: 'ตรวจรับคืนพัสดุครบถ้วน สภาพเรียบร้อย',
-          actorName: 'นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบ)',
+          actorName: 'จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)',
           actorRole: 'inspector',
           timestamp: `${rDate} 15:30`,
           statusTo: 'returned'
         }
       ],
-      deliveredBy: 'นายสุรชัย ธรรมดา (เจ้าหน้าที่พัสดุ)',
+      deliveredBy: 'จ.ส.อ. เกียรติพล หาทรัพย์ (จพง.ธุรการชำนาญงาน)',
       deliveredAt: `${bDate} 11:00`,
-      receivedBy: 'นายประสิทธิ์ มั่นคง (ผู้ตรวจสอบพัสดุ)',
+      receivedBy: 'จ.ส.อ. เกียรติพล หาทรัพย์ (ผู้ตรวจรับคืน)',
       receivedAt: `${rDate} 15:30`,
       returnInspectionResult: 'perfect',
       returnNotes: 'ส่งคืนพัสดุครบตามจำนวน สภาพเรียบร้อย ใช้งานได้ปกติ'
@@ -260,15 +260,15 @@ async function exportFromMySQL() {
       id: 'q-001',
       queueNumber: 'B-0027',
       type: 'borrow',
-      borrowerName: 'นายสมพร จันทร์ทอง',
-      phone: '081-998-1122',
-      itemsSummary: 'เก้าอี้ 50 ตัว, โต๊ะ 5 ตัว',
+      borrowerName: 'นางรัชนี สร้อยคำ',
+      phone: '062-261-4951',
+      itemsSummary: 'เก้าอี้ 30 ตัว, เต้นท์ 2 หลัง',
       departmentOrMoo: 'หมู่ที่ 2 บ้านฝางเทิง',
       createdAt: '2026-10-19 09:00',
       status: 'waiting',
       calledAt: null,
       counterNumber: null,
-      notes: 'ยืมจัดงานบุญกฐิน'
+      notes: 'ยืมจัดงานบุญ'
     }
   ];
 
@@ -285,18 +285,18 @@ async function exportFromMySQL() {
       amphoe: 'อำเภอสิรินธร',
       province: 'จังหวัดอุบลราชธานี',
       postalCode: '34350',
-      phone: '045-899123, 081-9988776',
-      email: 'fangkam2021@gmail.com',
-      returnTimeLimit: '16:30 น.',
-      returnLocationDefault: 'อาคารงานพัสดุและคลังกลาง อบต.ฝางคำ',
+      phone: '045-252586',
+      email: 'info@fangkham.go.th',
+      returnTimeLimit: 'เวลาราชการ',
+      returnLocationDefault: 'องค์การบริหารส่วนตำบลฝางคำ',
       mayorName: 'นายจำรูญ พิทักษ์',
       mayorPosition: 'นายกองค์การบริหารส่วนตำบลฝางคำ',
-      paladName: 'นางสาวจริยา วงศ์สว่าง',
+      paladName: 'นายชาญชัย อักโข',
       paladPosition: 'ปลัดองค์การบริหารส่วนตำบลฝางคำ',
-      headOfSupplyName: 'นายประสิทธิ์ มั่นคง',
-      headOfSupplyPosition: 'หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ',
-      supplyOfficerName: 'นายสุรชัย ธรรมดา',
-      supplyOfficerPosition: 'เจ้าหน้าที่พัสดุชำนาญงาน'
+      headOfSupplyName: 'นางวาสนา สินทรัพย์',
+      headOfSupplyPosition: 'ผู้อำนวยการกองคลัง',
+      supplyOfficerName: 'จ.ส.อ.เกียรติพล หาทรัพย์',
+      supplyOfficerPosition: 'เจ้าพนักงานธุรการชำนาญงาน'
     }
   };
 

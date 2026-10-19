@@ -86,7 +86,7 @@ export const OfficialReturnReceipt: React.FC<OfficialReturnReceiptProps> = ({
     return name.replace(/\s*\([^)]*\)/g, '').trim();
   };
 
-  const supplyOfficerDisplayName = cleanName(orgSettings.supplyOfficerName) || 'นายสุรชัย ธรรมดา';
+  const supplyOfficerDisplayName = cleanName(orgSettings.supplyOfficerName) || 'จ.ส.อ. เกียรติพล หาทรัพย์';
 
   return (
     <div className="space-y-4">

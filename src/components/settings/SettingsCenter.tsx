@@ -27,21 +27,21 @@ export const SettingsCenter: React.FC = () => {
   // Local state for org settings
   const [orgName, setOrgName] = useState(orgSettings.orgName);
   const [logoUrl, setLogoUrl] = useState(orgSettings.logoUrl || '');
-  const [amphoe, setAmphoe] = useState(orgSettings.amphoe);
-  const [province, setProvince] = useState(orgSettings.province);
+  const [amphoe, setAmphoe] = useState(orgSettings.amphoe || 'อำเภอสิรินธร');
+  const [province, setProvince] = useState(orgSettings.province || 'จังหวัดอุบลราชธานี');
   const [postalCode, setPostalCode] = useState(orgSettings.postalCode || '34350');
-  const [phone, setPhone] = useState(orgSettings.phone);
-  const [email, setEmail] = useState(orgSettings.email || 'fangkam2021@gmail.com');
-  const [mayorName, setMayorName] = useState(orgSettings.mayorName || 'นายสมศักดิ์ สุวรรณโชติ');
+  const [phone, setPhone] = useState(orgSettings.phone || '045-252586');
+  const [email, setEmail] = useState(orgSettings.email || 'info@fangkham.go.th');
+  const [mayorName, setMayorName] = useState(orgSettings.mayorName || 'นายจำรูญ พิทักษ์');
   const [mayorPosition, setMayorPosition] = useState(orgSettings.mayorPosition || 'นายกองค์การบริหารส่วนตำบลฝางคำ');
-  const [paladName, setPaladName] = useState(orgSettings.paladName || 'นางสาวจริยา วงศ์สว่าง');
+  const [paladName, setPaladName] = useState(orgSettings.paladName || 'นายชาญชัย อักโข');
   const [paladPosition, setPaladPosition] = useState(orgSettings.paladPosition || 'ปลัดองค์การบริหารส่วนตำบลฝางคำ');
-  const [headOfSupplyName, setHeadOfSupplyName] = useState(orgSettings.headOfSupplyName || 'นายประสิทธิ์ มั่นคง');
-  const [headOfSupplyPosition, setHeadOfSupplyPosition] = useState(orgSettings.headOfSupplyPosition || 'หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ');
-  const [supplyOfficerName, setSupplyOfficerName] = useState(orgSettings.supplyOfficerName || 'นายสุรชัย ธรรมดา');
-  const [supplyOfficerPosition, setSupplyOfficerPosition] = useState(orgSettings.supplyOfficerPosition || 'เจ้าหน้าที่พัสดุชำนาญงาน');
-  const [returnLocation, setReturnLocation] = useState(orgSettings.returnLocationDefault);
-  const [returnTimeLimit, setReturnTimeLimit] = useState(orgSettings.returnTimeLimit);
+  const [headOfSupplyName, setHeadOfSupplyName] = useState(orgSettings.headOfSupplyName || 'นางวาสนา สินทรัพย์');
+  const [headOfSupplyPosition, setHeadOfSupplyPosition] = useState(orgSettings.headOfSupplyPosition || 'ผู้อำนวยการกองคลัง');
+  const [supplyOfficerName, setSupplyOfficerName] = useState(orgSettings.supplyOfficerName || 'จ.ส.อ.เกียรติพล หาทรัพย์');
+  const [supplyOfficerPosition, setSupplyOfficerPosition] = useState(orgSettings.supplyOfficerPosition || 'เจ้าพนักงานธุรการชำนาญงาน');
+  const [returnLocation, setReturnLocation] = useState(orgSettings.returnLocationDefault || 'องค์การบริหารส่วนตำบลฝางคำ');
+  const [returnTimeLimit, setReturnTimeLimit] = useState(orgSettings.returnTimeLimit || 'เวลาราชการ');
 
   // Local state for rules
   const [rulesList, setRulesList] = useState(rulesConfig.rules || []);
@@ -494,7 +494,7 @@ export const SettingsCenter: React.FC = () => {
                       type="text"
                       value={mayorName}
                       onChange={(e) => setMayorName(e.target.value)}
-                      placeholder="เช่น นายสมศักดิ์ สุวรรณโชติ"
+                      placeholder="เช่น นายจำรูญ พิทักษ์"
                       className="w-full p-2 bg-white border border-blue-300 rounded-lg font-semibold text-slate-900 focus:ring-2 focus:ring-blue-500"
                       required
                     />
@@ -563,7 +563,7 @@ export const SettingsCenter: React.FC = () => {
                       type="text"
                       value={supplyOfficerName}
                       onChange={(e) => setSupplyOfficerName(e.target.value)}
-                      placeholder="เช่น นายสุรชัย ธรรมดา"
+                      placeholder="เช่น จ.ส.อ. เกียรติพล หาทรัพย์"
                       className="w-full p-2 bg-white border border-emerald-300 rounded-lg font-semibold text-slate-900 focus:ring-2 focus:ring-emerald-500"
                       required
                     />
@@ -577,7 +577,7 @@ export const SettingsCenter: React.FC = () => {
                       type="text"
                       value={supplyOfficerPosition}
                       onChange={(e) => setSupplyOfficerPosition(e.target.value)}
-                      placeholder="เช่น เจ้าหน้าที่พัสดุชำนาญงาน หรือ นักวิชาการพัสดุปฏิบัติการ"
+                      placeholder="เช่น เจ้าพนักงานธุรการชำนาญงาน หรือ เจ้าพนักงานพัสดุ"
                       className="w-full p-2 bg-white border border-emerald-300 rounded-lg font-medium text-slate-900 focus:ring-2 focus:ring-emerald-500"
                       required
                     />
@@ -588,24 +588,24 @@ export const SettingsCenter: React.FC = () => {
                     <span className="text-[10px] text-slate-500">เลือกตำแหน่งด่วน:</span>
                     <button
                       type="button"
-                      onClick={() => setSupplyOfficerPosition('เจ้าหน้าที่พัสดุชำนาญงาน')}
+                      onClick={() => setSupplyOfficerPosition('เจ้าพนักงานธุรการชำนาญงาน')}
                       className="px-2 py-0.5 bg-white hover:bg-emerald-100 border border-slate-200 rounded text-[10px] text-slate-700 transition-colors"
                     >
-                      เจ้าหน้าที่พัสดุชำนาญงาน
+                      เจ้าพนักงานธุรการชำนาญงาน
                     </button>
                     <button
                       type="button"
-                      onClick={() => setSupplyOfficerPosition('นักวิชาการพัสดุปฏิบัติการ')}
+                      onClick={() => setSupplyOfficerPosition('เจ้าพนักงานพัสดุ')}
                       className="px-2 py-0.5 bg-white hover:bg-emerald-100 border border-slate-200 rounded text-[10px] text-slate-700 transition-colors"
                     >
-                      นักวิชาการพัสดุปฏิบัติการ
+                      เจ้าพนักงานพัสดุ
                     </button>
                     <button
                       type="button"
-                      onClick={() => setSupplyOfficerPosition('เจ้าพนักงานพัสดุปฏิบัติงาน')}
+                      onClick={() => setSupplyOfficerPosition('เจ้าหน้าที่พัสดุ')}
                       className="px-2 py-0.5 bg-white hover:bg-emerald-100 border border-slate-200 rounded text-[10px] text-slate-700 transition-colors"
                     >
-                      เจ้าพนักงานพัสดุปฏิบัติงาน
+                      เจ้าหน้าที่พัสดุ
                     </button>
                   </div>
                 </div>
@@ -630,7 +630,7 @@ export const SettingsCenter: React.FC = () => {
                       type="text"
                       value={paladName}
                       onChange={(e) => setPaladName(e.target.value)}
-                      placeholder="เช่น นางสาวจริยา วงศ์สว่าง"
+                      placeholder="เช่น นายชาญชัย อักโข"
                       className="w-full p-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-900 focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -650,26 +650,26 @@ export const SettingsCenter: React.FC = () => {
                 </div>
               </div>
 
-              {/* 4. หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ (Head of Supply) */}
+              {/* 4. หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ / ผอ.กองคลัง (Head of Supply) */}
               <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2.5">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-slate-800 flex items-center gap-1.5">
                     <span className="w-5 h-5 rounded-full bg-slate-700 text-white flex items-center justify-center text-[10px]">4</span>
-                    หัวหน้างานพัสดุ / ผู้อำนวยการกอง
+                    ผู้อำนวยการกองคลัง / หัวหน้างานพัสดุ
                   </span>
-                  <span className="text-[10px] text-slate-500">หัวหน้าสายงานพัสดุ</span>
+                  <span className="text-[10px] text-slate-500">สายงานพัสดุ</span>
                 </div>
 
                 <div className="space-y-2">
                   <div>
                     <label className="block font-semibold text-slate-700 mb-0.5">
-                      ชื่อ-สกุล หัวหน้างานพัสดุ:
+                      ชื่อ-สกุล ผอ.กองคลัง / หัวหน้างานพัสดุ:
                     </label>
                     <input
                       type="text"
                       value={headOfSupplyName}
                       onChange={(e) => setHeadOfSupplyName(e.target.value)}
-                      placeholder="เช่น นายประสิทธิ์ มั่นคง"
+                      placeholder="เช่น นางวาสนา สินทรัพย์"
                       className="w-full p-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-900 focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -682,7 +682,7 @@ export const SettingsCenter: React.FC = () => {
                       type="text"
                       value={headOfSupplyPosition}
                       onChange={(e) => setHeadOfSupplyPosition(e.target.value)}
-                      placeholder="เช่น หัวหน้าฝ่ายบริหารงานทั่วไป / หัวหน้างานพัสดุ"
+                      placeholder="เช่น ผู้อำนวยการกองคลัง"
                       className="w-full p-2 bg-white border border-slate-300 rounded-lg font-medium text-slate-900 focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -697,31 +697,32 @@ export const SettingsCenter: React.FC = () => {
         <div className="bg-white rounded-2xl border border-slate-200 shadow-xs p-5 space-y-4">
           <h3 className="font-bold text-xs text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
             <Clock className="w-4 h-4 text-blue-700" />
-            3. พารามิเตอร์กฎการยืมและเวลาส่งคืน
+            3. กำหนดเวลาและระเบียบการยืมพัสดุ
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div>
               <label className="block font-semibold text-slate-700 mb-1">
-                กำหนดส่งคืนภายในเวลา (Deadlines)
+                กำหนดส่งคืนภายในเวลา
               </label>
               <input
                 type="text"
                 value={returnTimeLimit}
                 onChange={(e) => setReturnTimeLimit(e.target.value)}
-                className="w-full p-2 bg-red-50 text-red-900 border border-red-300 rounded-lg font-bold"
+                placeholder="เช่น เวลาราชการ หรือ 16:30 น."
+                className="w-full p-2 bg-slate-50 border border-slate-300 rounded-xl font-medium text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
               <label className="block font-semibold text-slate-700 mb-1">
-                เวอร์ชันระเบียบการยืม (Rules Version)
+                ระเบียบการยืม (Rules Version)
               </label>
               <input
                 type="text"
-                value={rulesConfig.version}
+                value={rulesConfig.version || 'ระเบียบ อบต.ฝางคำ'}
                 disabled
-                className="w-full p-2 bg-slate-100 text-slate-600 border border-slate-200 rounded-lg font-mono"
+                className="w-full p-2 bg-slate-50 text-slate-700 border border-slate-200 rounded-xl font-medium"
               />
             </div>
           </div>

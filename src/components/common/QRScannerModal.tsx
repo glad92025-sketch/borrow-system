@@ -90,38 +90,38 @@ export const QRScannerModal: React.FC<QRScannerModalProps> = ({
             <div className="grid grid-cols-2 gap-2 text-xs">
               <button
                 type="button"
-                onClick={() => handleQuickPick('B-0069')}
+                onClick={() => handleQuickPick('B-0011')}
                 className="p-2 text-left bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg text-blue-900 transition-colors"
               >
-                <strong className="block font-semibold">คิว B-0069</strong>
-                <span className="text-[11px] text-blue-700 truncate block">นายทองดี (เต็นท์ 5 หลัง)</span>
+                <strong className="block font-semibold">คิว B-0011</strong>
+                <span className="text-[11px] text-blue-700 truncate block">นายรักกี้ (เต็นท์ 2 หลัง)</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => handleQuickPick('AST-69-0001')}
+                onClick={() => handleQuickPick('AST-FK-0007')}
                 className="p-2 text-left bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-lg text-amber-900 transition-colors"
               >
-                <strong className="block font-semibold">AST-69-0001</strong>
-                <span className="text-[11px] text-amber-700 truncate block">เต็นท์โค้งผ้าใบขาว 4x8ม.</span>
+                <strong className="block font-semibold">AST-FK-0007</strong>
+                <span className="text-[11px] text-amber-700 truncate block">เต้นท์ (อบต.ฝางคำ)</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => handleQuickPick('BOR-2569-000070')}
+                onClick={() => handleQuickPick('B-0026')}
                 className="p-2 text-left bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-900 transition-colors"
               >
-                <strong className="block font-semibold">BOR-2569-000070</strong>
-                <span className="text-[11px] text-emerald-700 truncate block">น.ส.กนกวรรณ (โปรเจกเตอร์)</span>
+                <strong className="block font-semibold">คิว B-0026</strong>
+                <span className="text-[11px] text-emerald-700 truncate block">นายวรวุฒิ ดวงแก้ว (เก้าอี้)</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => handleQuickPick('AST-69-0005')}
+                onClick={() => handleQuickPick('AST-FK-0008')}
                 className="p-2 text-left bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-lg text-purple-900 transition-colors"
               >
-                <strong className="block font-semibold">AST-69-0005</strong>
-                <span className="text-[11px] text-purple-700 truncate block">ชุดลำโพงล้อลาก 15 นิ้ว</span>
+                <strong className="block font-semibold">AST-FK-0008</strong>
+                <span className="text-[11px] text-purple-700 truncate block">เก้าอี้ (อบต.ฝางคำ)</span>
               </button>
             </div>
           </div>
